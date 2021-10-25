@@ -1,0 +1,216 @@
+package com.tutlane.simplecalculator;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    Button addbtn, subbtn, mulbtn, divbtn, n0, n1, n2, n3, n4, n5, n6, n7, n8, n9, clearbtn,equalsbtn;
+    TextView result ,info,info2;
+
+private final String ADDITION = "+";
+
+private final String MULTIPLICATION = "*";
+    private final String SUBTRACTION = "-";
+    private final String DIVISION = "/";
+    private final String EQU = "0";
+    public String ACTION;
+    public float val1;
+    public float val2;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        addbtn = findViewById(R.id.addbtn);
+        addbtn.setOnClickListener(this);
+
+        subbtn = findViewById(R.id.subbtn);
+        subbtn.setOnClickListener(this);
+
+        mulbtn = findViewById(R.id.mulbtn);
+        mulbtn.setOnClickListener(this);
+
+        divbtn = findViewById(R.id.divbtn);
+        divbtn.setOnClickListener(this);
+
+        n0 = findViewById(R.id.num0);
+
+
+        n1 = findViewById(R.id.num1);
+        n1.setOnClickListener(this);
+
+        n2 = findViewById(R.id.num2);
+        n2.setOnClickListener(this);
+
+        n3 = findViewById(R.id.num3);
+        n3.setOnClickListener(this);
+
+        n4 = findViewById(R.id.num4);
+        n4.setOnClickListener(this);
+
+        n5 = findViewById(R.id.num5);
+        n5.setOnClickListener(this);
+
+        n6 = findViewById(R.id.num6);
+        n6.setOnClickListener(this);
+
+        n7 = findViewById(R.id.num7);
+        n7.setOnClickListener(this);
+
+        n8 = findViewById(R.id.num8);
+        n8.setOnClickListener(this);
+
+        n9 = findViewById(R.id.num9);
+        n9.setOnClickListener(this);
+
+        result = findViewById(R.id.result);
+        result.setOnClickListener(this);
+
+        clearbtn = findViewById(R.id.clearbtn);
+        clearbtn.setOnClickListener(this);
+        info = findViewById(R.id.info);
+         info2 = findViewById(R.id.info2);
+        equalsbtn = findViewById(R.id.equalsbtn);
+        equalsbtn.setOnClickListener(this);
+
+
+
+
+        n0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                info.append("0");
+                info2.append("0");
+            }
+        });
+
+        n1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+               info.append("1");
+                info2.append("1");
+            }
+        });
+
+        n2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                info.append("2");
+                info2.append("2");
+            }
+        });
+
+        n3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+              info.append("3");
+                info2.append("3");
+
+            }
+        });
+
+
+        n4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                info.append("4");
+                info2.append("4");
+            }
+        });
+
+        n5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                info.append("5");
+                info2.append("5");
+            }
+        });
+
+        n6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                info.append("6");
+                info2.append("6");
+            }
+        });
+
+
+        n7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                info.append("7");
+                info2.append("7");
+            }
+        });
+
+        n8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                info.append("8");
+                info2.append("8");
+
+            }
+        });
+
+        n9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                info.append("9");
+                info2.append("9");
+            }
+        });
+
+
+        addbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+          val1 = Float.parseFloat(info.getText() + "");
+           info.setText(null);
+                info2.append("+");
+            }
+
+
+
+        });
+
+
+
+        equalsbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                val2 = Float.parseFloat(info.getText()+"");
+          result.setText(val1+val2+"");
+                
+
+
+
+            }
+        });
+
+        clearbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+               result.setText(null);
+                info.setText(null);
+            }
+        });}
+
+
+    @Override
+    public void onClick(View view) {
+
+    }
+}
+
+
+

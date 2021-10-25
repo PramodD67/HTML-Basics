@@ -1,0 +1,25 @@
+<html>
+<head>
+<title></title>
+<style>
+#wrapper{
+border:2px solid blue;
+height:200px;
+}
+#div1
+{
+position:relative;
+border:2px solid red;
+height:100px;
+width:100px;
+left:100px;
+top:80px;
+}
+</style>
+</head>
+<body>
+<div id="wrapper">
+<div id="div1">Div 1</div>
+</div>
+</body>
+</html>

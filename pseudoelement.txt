@@ -1,0 +1,50 @@
+<html>
+<head>
+<title></title>
+<style>
+p::first-letter
+{
+font-size:25;
+color:dodgerblue;
+}
+p::first-line
+{
+text-transform:caps;
+}
+p::selection
+{
+background-color:yellow;
+}
+</style>
+</head>
+<body>
+<p>A CSS rule consists of a selector and a declaration block.
+The selector points to the HTML element you want to style.
+The declaration block contains one or more declarations separated by semicolons.
+Each declaration includes a CSS property name and a value, separated by a colon.
+Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.</P>
+<p>A CSS selector selects the HTML element(s) you want to style.
+CSS selectors are used to "find" (or select) the HTML elements you want to style.
+We can divide CSS selectors into five categories:</p>
+<P>PSEUDO CLASS:</P>
+A pseudo-class is used to define a special state of an element.
+For example, it can be used to:
+<P>*Style an element when a user mouses over it</P>
+<P>*Style visited and unvisited links differently</P>
+<P>*Style an element when it gets focus</P>
+<P>Syntax:</P>
+<P>The syntax of pseudo-classes:</P>
+<P>selector:pseudo-class {</P>
+<P>property: value;</P>
+<P>}</P>
+<P>PSEUDO ELEMENT:</P>
+<P>A CSS pseudo-element is used to style specified parts of an element.
+For example, it can be used to:</P>
+<P>*Style the first letter, or line, of an element</P>
+<P>*content before, or after, the content of an element</P>
+<P>Syntax:</P>
+<P>The syntax of pseudo-elements:</P>
+<P>selector::pseudo-element {</P>
+<P>property: value;</P>
+</body>
+</html>
